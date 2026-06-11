@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-06-11T14:10:54.990583+00:00",
+  "record_count": 3,
+  "items": [
+    {
+      "doi": "10.9999/synthetic.2024.001",
+      "checksum": "db7e5b039049fbe878fe9af803a6904c7c71f907dc12bba95420713d0e02a3c2"
+    },
+    {
+      "doi": "10.9999/synthetic.2024.002",
+      "checksum": "4e67e8355a9d57c8ad167850419277fc5797ca920c118a8d8799e11d7a04cb8e"
+    },
+    {
+      "doi": "10.9999/synthetic.2024.003",
+      "checksum": "491d0c10e05fddefa5d26f5961928f771adcf5ff84c29600164b54feb0d40589"
+    }
+  ],
+  "root_checksum": "0cfc2f71410e6d32d0af1389b25f2b3e3f55ef6bdb551cc660b15cd175a87052"
+}

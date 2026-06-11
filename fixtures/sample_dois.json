@@ -1,0 +1,29 @@
+[
+  {
+    "doi": "10.9999/synthetic.2024.001",
+    "title": "Automated Knowledge Extraction from Scientific Literature",
+    "abstract": "We present a synthetic study on automated extraction of structured knowledge from scientific abstracts using natural language processing techniques. Results demonstrate improved precision over baseline methods on our synthetic benchmark dataset.",
+    "authors": ["Alice Researcher", "Bob Scholar", "Carol Analyst"],
+    "year": 2024,
+    "journal": "Journal of Synthetic Research",
+    "keywords": ["NLP", "knowledge extraction", "scientific literature"]
+  },
+  {
+    "doi": "10.9999/synthetic.2024.002",
+    "title": "LLM-Assisted Metadata Enrichment in Digital Libraries",
+    "abstract": "This synthetic paper examines the application of large language models for enriching incomplete bibliographic records in digital library systems. We evaluate enrichment quality using synthetic benchmarks with controlled ground truth.",
+    "authors": ["David Librarian", "Eve Curator"],
+    "year": 2024,
+    "journal": "Digital Library Quarterly",
+    "keywords": ["LLM", "metadata", "digital libraries", "enrichment"]
+  },
+  {
+    "doi": "10.9999/synthetic.2024.003",
+    "title": "Structured Data Extraction from Research Abstracts",
+    "abstract": "A synthetic benchmark study of structured data extraction pipelines applied to research abstracts. The pipeline produces validated JSON output with per-record checksums for downstream auditability.",
+    "authors": ["Frank Pipeline", "Grace Output"],
+    "year": 2023,
+    "journal": "Data Engineering Letters",
+    "keywords": ["data extraction", "structured output", "research pipeline"]
+  }
+]
