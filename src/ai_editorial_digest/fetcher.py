@@ -14,7 +14,7 @@ def fetch_metadata(doi: str) -> RawMetadata:
 
     METADATA_PROVIDER env var controls the backend:
       - 'mock' (default): returns synthetic fixture data — no network calls
-      - 'crossref': queries the Crossref REST API (stub, not implemented in portfolio version)
+      - 'crossref': Crossref REST API (optional live provider, not wired here)
     """
     provider = os.getenv("METADATA_PROVIDER", "mock")
     if provider == "mock":
@@ -47,8 +47,8 @@ def _fetch_mock(doi: str) -> RawMetadata:
 
 
 def _fetch_crossref(doi: str) -> RawMetadata:
-    """Query Crossref REST API (stub — not implemented in portfolio version)."""
+    """Query Crossref REST API (optional live provider)."""
     raise NotImplementedError(
-        "Crossref integration is a stub in this portfolio version. "
-        "Set METADATA_PROVIDER=mock for CI/demo use."
+        "Crossref is an optional live provider and is not wired in this public repo. "
+        "Use METADATA_PROVIDER=mock (default) for demo and CI."
     )

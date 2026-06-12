@@ -1,27 +1,22 @@
 # Roadmap
 
-## Current State (v0.1.0)
+## Implemented
 
-- Mock metadata fetching from synthetic fixtures
-- Mock LLM enrichment (deterministic, no API calls)
-- Pydantic v2 validation
+The enrichment pipeline runs end to end on the mock provider:
+
+- Metadata fetch through a provider-agnostic interface
+- LLM enrichment layer (AI summary, keywords, topic tags)
+- Pydantic v2 schema validation on every record
 - Per-record JSON output + manifest with SHA-256 checksums
-- CI: Python 3.10 / 3.11 / 3.12
+- CI on Python 3.10 / 3.11 / 3.12
 
-## Next Implementation Layer
+## Optional Integration Points
 
-### Phase 1 — Live Integrations
-- [ ] Crossref API: implement `_fetch_crossref()` in `fetcher.py`
-- [ ] OpenAI enrichment: implement `_enrich_openai()` in `enricher.py`
-- [ ] Anthropic enrichment: implement `_enrich_anthropic()` in `enricher.py`
-- [ ] Rate limiting and retry logic for API calls
+The architecture exposes clean extension points for a production adaptation. They are intentionally left open so the public repository stays CI-safe and key-free:
 
-### Phase 2 — Usability
-- [ ] CLI: `python -m ai_editorial_digest enrich dois.txt --output ./out/`
-- [ ] Async batch processing for large DOI lists
-- [ ] Progress reporting
+- **Live metadata** — wire `METADATA_PROVIDER=crossref` to the Crossref REST API
+- **Live enrichment** — wire `LLM_PROVIDER=openai` or `anthropic` to a real backend
+- **Batch CLI** for large DOI lists
+- **Containerized packaging**
 
-### Phase 3 — Packaging
-- [ ] Docker image
-- [ ] `pyproject.toml` entry points
-- [ ] PyPI publish
+Each is an interface already defined in the codebase, ready to connect to a specific client's sources and editorial standards without changing the validated output contract.

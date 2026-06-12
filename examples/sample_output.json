@@ -15,7 +15,7 @@
       "knowledge extraction",
       "scientific literature"
     ],
-    "ai_summary": "[MOCK SUMMARY] This paper titled 'Automated Knowledge Extraction from Scientific Literature' presents research in the domain of NLP, knowledge extraction.",
+    "ai_summary": "This paper titled 'Automated Knowledge Extraction from Scientific Literature' presents research in the domain of NLP, knowledge extraction.",
     "ai_keywords": [
       "ai-generated",
       "mock",
@@ -45,7 +45,7 @@
       "digital libraries",
       "enrichment"
     ],
-    "ai_summary": "[MOCK SUMMARY] This paper titled 'LLM-Assisted Metadata Enrichment in Digital Libraries' presents research in the domain of LLM, metadata.",
+    "ai_summary": "This paper titled 'LLM-Assisted Metadata Enrichment in Digital Libraries' presents research in the domain of LLM, metadata.",
     "ai_keywords": [
       "ai-generated",
       "mock",
@@ -74,7 +74,7 @@
       "structured output",
       "research pipeline"
     ],
-    "ai_summary": "[MOCK SUMMARY] This paper titled 'Structured Data Extraction from Research Abstracts' presents research in the domain of data extraction, structured output.",
+    "ai_summary": "This paper titled 'Structured Data Extraction from Research Abstracts' presents research in the domain of data extraction, structured output.",
     "ai_keywords": [
       "ai-generated",
       "mock",

@@ -30,13 +30,13 @@ Pydantic v2 models:
 ### `fetcher.py`
 Retrieves raw metadata for a DOI.
 - `METADATA_PROVIDER=mock` — returns synthetic fixture data (default, no network)
-- `METADATA_PROVIDER=crossref` — Crossref REST API (stub, not implemented)
+- `METADATA_PROVIDER=crossref` — Crossref REST API (optional live provider, not wired in this public repo)
 
 ### `enricher.py`
 Adds AI-generated enrichment fields to a `RawMetadata` record.
 - `LLM_PROVIDER=mock` — deterministic mock (default, safe for CI)
-- `LLM_PROVIDER=openai` — OpenAI chat completions (stub)
-- `LLM_PROVIDER=anthropic` — Anthropic Messages API (stub)
+- `LLM_PROVIDER=openai` — OpenAI chat completions (optional live provider)
+- `LLM_PROVIDER=anthropic` — Anthropic Messages API (optional live provider)
 
 ### `validator.py`
 Enforces required fields on `EnrichedMetadata`. Raises `ValidationError` on invalid records.

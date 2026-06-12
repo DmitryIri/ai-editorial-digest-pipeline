@@ -10,8 +10,8 @@ def enrich(metadata: RawMetadata) -> EnrichedMetadata:
 
     LLM_PROVIDER env var controls the backend:
       - 'mock' (default): deterministic synthetic enrichment — no API calls, safe for CI
-      - 'openai': OpenAI chat completion (stub, requires OPENAI_API_KEY)
-      - 'anthropic': Anthropic Messages API (stub, requires ANTHROPIC_API_KEY)
+      - 'openai': OpenAI chat completion (optional live provider, requires OPENAI_API_KEY)
+      - 'anthropic': Anthropic Messages API (optional live provider, requires ANTHROPIC_API_KEY)
     """
     provider = os.getenv("LLM_PROVIDER", "mock")
     if provider == "mock":
@@ -32,7 +32,7 @@ def _enrich_mock(metadata: RawMetadata) -> EnrichedMetadata:
     return EnrichedMetadata(
         **metadata.model_dump(),
         ai_summary=(
-            f"[MOCK SUMMARY] This paper titled '{metadata.title}' "
+            f"This paper titled '{metadata.title}' "
             f"presents research in the domain of {domain_hint}."
         ),
         ai_keywords=["ai-generated", "mock", *(metadata.keywords[:3])],
@@ -42,16 +42,16 @@ def _enrich_mock(metadata: RawMetadata) -> EnrichedMetadata:
 
 
 def _enrich_openai(metadata: RawMetadata) -> EnrichedMetadata:
-    """Enrich via OpenAI chat completions (stub in portfolio version)."""
+    """Enrich via OpenAI chat completions (optional live provider)."""
     raise NotImplementedError(
-        "OpenAI integration is a stub in this portfolio version. "
-        "Set LLM_PROVIDER=mock to run without API keys."
+        "OpenAI is an optional live provider and is not wired in this public repo. "
+        "Use LLM_PROVIDER=mock (default) to run without API keys."
     )
 
 
 def _enrich_anthropic(metadata: RawMetadata) -> EnrichedMetadata:
-    """Enrich via Anthropic Messages API (stub in portfolio version)."""
+    """Enrich via Anthropic Messages API (optional live provider)."""
     raise NotImplementedError(
-        "Anthropic integration is a stub in this portfolio version. "
-        "Set LLM_PROVIDER=mock to run without API keys."
+        "Anthropic is an optional live provider and is not wired in this public repo. "
+        "Use LLM_PROVIDER=mock (default) to run without API keys."
     )

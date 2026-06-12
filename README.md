@@ -77,9 +77,9 @@ Enriched 2 records:
 
 DOI:        10.9999/synthetic.2024.001
 Title:      Automated Knowledge Extraction from Scientific Literature
-AI Summary: A framework for automated extraction of structured knowledge
-            entities from scientific abstracts, with improved precision
-            over rule-based baselines on a synthetic benchmark dataset.
+AI Summary: This paper titled 'Automated Knowledge Extraction from
+            Scientific Literature' presents research in the domain of
+            NLP, knowledge extraction.
 AI Topics:  methodology, empirical study
 Provider:   mock
 
@@ -104,8 +104,8 @@ Each enriched record:
   "year": 2024,
   "journal": "Journal of Synthetic Research",
   "keywords": ["NLP", "knowledge extraction"],
-  "ai_summary": "A framework for automated extraction of structured knowledge entities from scientific abstracts, achieving higher precision than rule-based approaches on the benchmark dataset.",
-  "ai_keywords": ["knowledge-extraction", "NLP", "scientific-literature"],
+  "ai_summary": "This paper titled 'Automated Knowledge Extraction from Scientific Literature' presents research in the domain of NLP, knowledge extraction.",
+  "ai_keywords": ["ai-generated", "mock", "NLP", "knowledge extraction", "scientific literature"],
   "ai_topics": ["methodology", "empirical study"],
   "enrichment_provider": "mock"
 }
